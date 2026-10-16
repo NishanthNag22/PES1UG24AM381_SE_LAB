@@ -1,4 +1,4 @@
-﻿"""Module for managing scholarship disbursement and awards ledger."""
+"""Module for managing scholarship disbursement and awards ledger."""
 
 import sqlite3
 
