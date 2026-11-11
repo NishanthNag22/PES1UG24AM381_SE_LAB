@@ -1,0 +1,11 @@
+$ python -m coverage run --branch --source=bus_transit_fare -m pytest BranchCoverageTest_bus_transit_fare.py -q
+.........................................                                [100%]
+41 passed in 0.22s
+$ python -m coverage report -m --fail-under=90
+Name                  Stmts   Miss Branch BrPart  Cover   Missing
+-----------------------------------------------------------------
+bus_transit_fare.py      57      0     40      0   100%
+-----------------------------------------------------------------
+TOTAL                    57      0     40      0   100%
+$ python -m coverage json -o reports/branch_branch.json
+Wrote JSON report to reports/branch_branch.json
