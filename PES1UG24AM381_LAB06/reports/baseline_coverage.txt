@@ -1,0 +1,22 @@
+$ python -m coverage run --source=bus_transit_fare -m pytest test_bus_transit.py -q
+.                                                                        [100%]
+1 passed in 0.02s
+$ python -m coverage report -m
+Name                  Stmts   Miss  Cover   Missing
+---------------------------------------------------
+bus_transit_fare.py      57     29    49%   3, 10, 16, 18, 22-23, 33-34, 37-41, 43, 45, 50, 55, 57, 62-74
+---------------------------------------------------
+TOTAL                    57     29    49%
+$ python -m coverage json -o reports/baseline_line.json
+Wrote JSON report to reports/baseline_line.json
+$ python -m coverage run --branch --source=bus_transit_fare -m pytest test_bus_transit.py -q
+.                                                                        [100%]
+1 passed in 0.02s
+$ python -m coverage report -m
+Name                  Stmts   Miss Branch BrPart  Cover   Missing
+-----------------------------------------------------------------
+bus_transit_fare.py      57     29     40     12    45%   3, 10, 16, 18, 22-23, 33-34, 37-41, 43, 45, 50, 55, 57, 62-74
+-----------------------------------------------------------------
+TOTAL                    57     29     40     12    45%
+$ python -m coverage json -o reports/baseline_branch.json
+Wrote JSON report to reports/baseline_branch.json
