@@ -1,0 +1,180 @@
+FFF                                                                      [100%]
+=================================== FAILURES ===================================
+  + Exception Group Traceback (most recent call last):
+  |   File "/workspace/scratch/031cb571d8c8/lab7_work/original/test_processor.py", line 24, in test_parse_transit_corridor_no_crash
+  |     @given(unexpected)
+  |                    ^^^
+  | BaseExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/workspace/scratch/031cb571d8c8/lab7_work/original/test_processor.py", line 27, in test_parse_transit_corridor_no_crash
+    |     result = parse_transit_corridor(value)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/scratch/031cb571d8c8/lab7_work/original/processor.py", line 2, in parse_transit_corridor
+    |     orig, dest, zones_str = corridor_code.strip().split('-')
+    |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | TypeError: a bytes-like object is required, not 'str'
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/workspace/scratch/031cb571d8c8/lab7_work/original/test_processor.py", line 29, in test_parse_transit_corridor_no_crash
+    |     pytest.fail(f"Unexpected {type(exc).__name__} for {value!r}: {exc}")
+    | Failed: Unexpected TypeError for b'': a bytes-like object is required, not 'str'
+    | Failing test case: test_parse_transit_corridor_no_crash(
+    |     value=b'',
+    | )
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/workspace/scratch/031cb571d8c8/lab7_work/original/test_processor.py", line 27, in test_parse_transit_corridor_no_crash
+    |     result = parse_transit_corridor(value)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/scratch/031cb571d8c8/lab7_work/original/processor.py", line 2, in parse_transit_corridor
+    |     orig, dest, zones_str = corridor_code.strip().split('-')
+    |     ^^^^^^^^^^^^^^^^^^^^^
+    | ValueError: not enough values to unpack (expected 3, got 1)
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/workspace/scratch/031cb571d8c8/lab7_work/original/test_processor.py", line 29, in test_parse_transit_corridor_no_crash
+    |     pytest.fail(f"Unexpected {type(exc).__name__} for {value!r}: {exc}")
+    | Failed: Unexpected ValueError for '': not enough values to unpack (expected 3, got 1)
+    | Failing test case: test_parse_transit_corridor_no_crash(
+    |     value='',
+    | )
+    +---------------- 3 ----------------
+    | Traceback (most recent call last):
+    |   File "/workspace/scratch/031cb571d8c8/lab7_work/original/test_processor.py", line 27, in test_parse_transit_corridor_no_crash
+    |     result = parse_transit_corridor(value)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/scratch/031cb571d8c8/lab7_work/original/processor.py", line 2, in parse_transit_corridor
+    |     orig, dest, zones_str = corridor_code.strip().split('-')
+    |                             ^^^^^^^^^^^^^^^^^^^
+    | AttributeError: 'NoneType' object has no attribute 'strip'
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/workspace/scratch/031cb571d8c8/lab7_work/original/test_processor.py", line 29, in test_parse_transit_corridor_no_crash
+    |     pytest.fail(f"Unexpected {type(exc).__name__} for {value!r}: {exc}")
+    | Failed: Unexpected AttributeError for None: 'NoneType' object has no attribute 'strip'
+    | Failing test case: test_parse_transit_corridor_no_crash(
+    |     value=None,  # or any other generated value
+    | )
+    +------------------------------------
+/workspace/scratch/031cb571d8c8/lab7_work/original/test_processor.py:24: BaseExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+  + Exception Group Traceback (most recent call last):
+  |   File "/workspace/scratch/031cb571d8c8/lab7_work/original/test_processor.py", line 34, in test_lookup_concession_discount_safe
+  |     @given(unexpected)
+  |                    ^^^
+  | BaseExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/workspace/scratch/031cb571d8c8/lab7_work/original/test_processor.py", line 37, in test_lookup_concession_discount_safe
+    |     result = lookup_concession_discount(value)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/scratch/031cb571d8c8/lab7_work/original/processor.py", line 16, in lookup_concession_discount
+    |     return discounts[category]
+    |            ~~~~~~~~~^^^^^^^^^^
+    | KeyError: ''
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/workspace/scratch/031cb571d8c8/lab7_work/original/test_processor.py", line 39, in test_lookup_concession_discount_safe
+    |     pytest.fail(f"Unexpected {type(exc).__name__} for {value!r}: {exc}")
+    | Failed: Unexpected KeyError for '': ''
+    | Failing test case: test_lookup_concession_discount_safe(
+    |     value='',  # or any other generated value
+    | )
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/workspace/scratch/031cb571d8c8/lab7_work/original/test_processor.py", line 37, in test_lookup_concession_discount_safe
+    |     result = lookup_concession_discount(value)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/scratch/031cb571d8c8/lab7_work/original/processor.py", line 8, in lookup_concession_discount
+    |     category = category_name.strip().upper()
+    |                ^^^^^^^^^^^^^^^^^^^
+    | AttributeError: 'NoneType' object has no attribute 'strip'
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/workspace/scratch/031cb571d8c8/lab7_work/original/test_processor.py", line 39, in test_lookup_concession_discount_safe
+    |     pytest.fail(f"Unexpected {type(exc).__name__} for {value!r}: {exc}")
+    | Failed: Unexpected AttributeError for None: 'NoneType' object has no attribute 'strip'
+    | Failing test case: test_lookup_concession_discount_safe(
+    |     value=None,  # or any other generated value
+    | )
+    +------------------------------------
+/workspace/scratch/031cb571d8c8/lab7_work/original/test_processor.py:34: BaseExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+  + Exception Group Traceback (most recent call last):
+  |   File "/workspace/scratch/031cb571d8c8/lab7_work/original/test_processor.py", line 44, in test_compute_passenger_density_safe
+  |     @given(unexpected)
+  |                    ^^^
+  | BaseExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/workspace/scratch/031cb571d8c8/lab7_work/original/test_processor.py", line 47, in test_compute_passenger_density_safe
+    |     result = compute_passenger_density(value)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/scratch/031cb571d8c8/lab7_work/original/processor.py", line 19, in compute_passenger_density
+    |     passengers_str, km_str = occupancy_ratio_str.split('/')
+    |                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | TypeError: a bytes-like object is required, not 'str'
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/workspace/scratch/031cb571d8c8/lab7_work/original/test_processor.py", line 49, in test_compute_passenger_density_safe
+    |     pytest.fail(f"Unexpected {type(exc).__name__} for {value!r}: {exc}")
+    | Failed: Unexpected TypeError for b'': a bytes-like object is required, not 'str'
+    | Failing test case: test_compute_passenger_density_safe(
+    |     value=b'',
+    | )
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/workspace/scratch/031cb571d8c8/lab7_work/original/test_processor.py", line 47, in test_compute_passenger_density_safe
+    |     result = compute_passenger_density(value)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/scratch/031cb571d8c8/lab7_work/original/processor.py", line 19, in compute_passenger_density
+    |     passengers_str, km_str = occupancy_ratio_str.split('/')
+    |     ^^^^^^^^^^^^^^^^^^^^^^
+    | ValueError: not enough values to unpack (expected 2, got 1)
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/workspace/scratch/031cb571d8c8/lab7_work/original/test_processor.py", line 49, in test_compute_passenger_density_safe
+    |     pytest.fail(f"Unexpected {type(exc).__name__} for {value!r}: {exc}")
+    | Failed: Unexpected ValueError for '': not enough values to unpack (expected 2, got 1)
+    | Failing test case: test_compute_passenger_density_safe(
+    |     value='',
+    | )
+    +---------------- 3 ----------------
+    | Traceback (most recent call last):
+    |   File "/workspace/scratch/031cb571d8c8/lab7_work/original/test_processor.py", line 47, in test_compute_passenger_density_safe
+    |     result = compute_passenger_density(value)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/scratch/031cb571d8c8/lab7_work/original/processor.py", line 19, in compute_passenger_density
+    |     passengers_str, km_str = occupancy_ratio_str.split('/')
+    |                              ^^^^^^^^^^^^^^^^^^^^^^^^^
+    | AttributeError: 'NoneType' object has no attribute 'split'
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/workspace/scratch/031cb571d8c8/lab7_work/original/test_processor.py", line 49, in test_compute_passenger_density_safe
+    |     pytest.fail(f"Unexpected {type(exc).__name__} for {value!r}: {exc}")
+    | Failed: Unexpected AttributeError for None: 'NoneType' object has no attribute 'split'
+    | Failing test case: test_compute_passenger_density_safe(
+    |     value=None,  # or any other generated value
+    | )
+    +------------------------------------
+/workspace/scratch/031cb571d8c8/lab7_work/original/test_processor.py:44: BaseExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+=========================== short test summary info ============================
+FAILED test_processor.py::test_parse_transit_corridor_no_crash - BaseExceptio...
+FAILED test_processor.py::test_lookup_concession_discount_safe - BaseExceptio...
+FAILED test_processor.py::test_compute_passenger_density_safe - BaseException...
+3 failed, 71 deselected in 3.92s

@@ -1,0 +1,11 @@
+==== Running parse_transit_corridor ====
+Enter corridor (e.g. DT-UP-3): DT-UP-three
+Invalid corridor code
+
+==== Running lookup_concession_discount ====
+Enter concession category (e.g. STUDENT, SENIOR): UNKNOWN
+Multiplier: Invalid concession category
+
+==== Running compute_passenger_density ====
+Enter passengers/km (e.g. 50/10.0): 50/0
+Density: Invalid density input

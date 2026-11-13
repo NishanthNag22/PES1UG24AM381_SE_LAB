@@ -1,0 +1,11 @@
+==== Running parse_transit_corridor ====
+Enter corridor (e.g. DT-UP-3): DT-UP-3
+Route DT->UP: 3 Zones, Fare $4.75
+
+==== Running lookup_concession_discount ====
+Enter concession category (e.g. STUDENT, SENIOR): STUDENT
+Multiplier: 0.5
+
+==== Running compute_passenger_density ====
+Enter passengers/km (e.g. 50/10.0): 50/10.0
+Density: 5.0

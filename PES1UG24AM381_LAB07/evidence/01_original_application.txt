@@ -1,0 +1,12 @@
+==== Running parse_transit_corridor ====
+Enter corridor (e.g. DT-UP-3): DT-UP-three
+Traceback (most recent call last):
+  File "/workspace/scratch/031cb571d8c8/lab7_work/original/processor.py", line 39, in <module>
+    main()
+  File "/workspace/scratch/031cb571d8c8/lab7_work/original/processor.py", line 28, in main
+    print(parse_transit_corridor(c_input))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/031cb571d8c8/lab7_work/original/processor.py", line 3, in parse_transit_corridor
+    zones = int(zones_str)
+            ^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'three'
